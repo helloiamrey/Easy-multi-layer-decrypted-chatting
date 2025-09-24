@@ -115,8 +115,6 @@ class server_ssl:
                                 client_socket.send(encrypt_data("Goodbye.", None, client_pub_key).encode("utf-8"))
                                 break
 
-                                    
-
                     else:
                         print("Client sent an unknown command.")
                     
