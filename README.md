@@ -1,4 +1,4 @@
-# Multi-Layer Encrypted Chat System
+# Multi-Layer Encrypted Chatting System
 
 > **WARNING: This is NOT a production-ready project!**  
 > Just a backup of my learning experiments. Use at your own risk!
@@ -44,7 +44,7 @@ If you really want to run this:
 
 ## Tech Stack (I think?)
 
-Python (because it's one of the few programming languages I kinda know.)<br>
+Python (because it's one of the few programming languages I kinda know) <br>
 SSL/TLS (copied from internet mostly)<br>
 AES encryption (from some tutorial I found)<br>
 Sockets (the basic stuff)<br>
