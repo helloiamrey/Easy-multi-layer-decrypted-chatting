@@ -1,7 +1,11 @@
-a = [('x', '1'), (2, 'x'), (5, 'x')]
-val = 'x'
+actual_code="print('Hello, World!')"
+msg="print('Hello, World!')"
 
-# 使用列表推导和 enumerate 找到第一个匹配项的索引
-index = next(index for index, item in enumerate(a) if item[1] == val)
+res=True
+if len(msg)==len(actual_code):
+    res=True
+    for i in range(len(msg)):
+        res= res&(msg[i]==actual_code[i])
+        #verify code
 
-print(index)  # 输出：1
+print(res)

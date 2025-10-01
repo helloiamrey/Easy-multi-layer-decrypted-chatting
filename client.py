@@ -5,14 +5,20 @@ import threading
 import time
 
 ifclosed = False
+targetAddress,targetPort='',0
 
 class client_ssl:
     def communication(self,pri_key=None,pub_key=None):
+        global targetAddress,targetPort
         print(f"Client Keypair: Private Key: {pri_key}, Public Key: {pub_key}")
-        CA_FILE = "cert/ca-cert.pem"
-        SERVER_CERT_FILE = "cert/server-cert.pem"  # 服务器证书文件路径
-        CLIENT_KEY_FILE = "cert/client-key.pem"
-        CLIENT_CERT_FILE = "cert/client-cert.pem"
+        try:
+            CA_FILE = "cert/ca-cert.pem"
+            SERVER_CERT_FILE = "cert/server-cert.pem"  # 服务器证书文件路径
+            CLIENT_KEY_FILE = "cert/client-key.pem"
+            CLIENT_CERT_FILE = "cert/client-cert.pem"
+        except Exception as e:
+            print(f"Error loading certificate files: {str(e)}, maybe cert missing?")
+            return
 
         # 创建SSL上下文对象
         context = ssl.SSLContext(ssl.PROTOCOL_TLS_CLIENT)
@@ -29,7 +35,7 @@ class client_ssl:
             # 将socket打包成SSL socket
             ssock = context.wrap_socket(sock, server_side=False)
             ssock.settimeout(5.0)
-            ssock.connect(('127.0.0.1', 9443))
+            ssock.connect((targetAddress, int(targetPort)))
         except Exception as e:
             print(f"Failed to connect to server: {str(e)}")
             return
@@ -111,6 +117,9 @@ class client_ssl:
 
 
 if __name__ == "__main__":
+    print("Press Enter some info to start the client...")
+    targetAddress=input("Target server address: ")
+    targetPort=input("Target server port: ")
     client = client_ssl()
     pairs=generate_keypair()
     client.communication(pairs[0],pairs[1])
