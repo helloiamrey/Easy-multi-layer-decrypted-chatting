@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # Multi-Layer Encrypted Chat System
+=======
+# Multi-Layer Encrypted Chatting System
+>>>>>>> 255ec06e9c8275fd7c27ac1c3155589c060d6378
 
 > **WARNING: This is NOT a production-ready project!**  
 > Just a backup of my learning experiments. Use at your own risk!
@@ -13,24 +17,24 @@ A half-baked, probably broken, multi-layer encrypted communication system I've b
 
 ## BIG FAT DISCLAIMER
 
-I'm **COMPLETELY NEW** to this stuff. Like, "just learned what SSL stands for yesterday" new. This code is:
-Full of bugs (I'm sure)
-Probably insecure as hell
-Missing half the features I planned
-A total mess to look at
+I'm **COMPLETELY NEW** to this stuff. Like, "just learned what SSL stands for yesterday" new. This code is:<br>
+Full of bugs (I'm sure)<br>
+Probably insecure as hell<br>
+Missing half the features I planned<br>
+A total mess to look at<br>
 
 **DO NOT** use this for anything serious. I'm literally just keeping it here as a backup before I accidentally rm -rf my entire project folder.
 
 ## What's supposed to work?
-**done:**
-Basic client-server connection
-SSL/TLS handshake (I think?)
-Some AES encryption on top of SSL (overkill? maybe)
-**working in progress:**
-Actually secure key exchange (yeah now)
-Proper error handling (lol)
-Documentation (you're reading it)
-Tests (what are those?)
+**done:**<br>
+Basic client-server connection <br>
+SSL/TLS handshake (I think?) <br>
+Some AES encryption on top of SSL (overkill? maybe) <br>
+**working in progress:** <br>
+Actually secure key exchange (yeah now) <br>
+Proper error handling (lol) <br>
+Documentation (you're reading it) <br>
+Tests (what are those?) <br>
 
 ## No Easy Start Guide
 
@@ -44,10 +48,10 @@ If you really want to run this:
 
 ## Tech Stack (I think?)
 
-Python (because it's one of the few programming languages I kinda know.)
-SSL/TLS (copied from internet mostly)
-AES encryption (from some tutorial I found)
-Sockets (the basic stuff)
+Python (because it's one of the few programming languages I kinda know) <br>
+SSL/TLS (copied from internet mostly)<br>
+AES encryption (from some tutorial I found)<br>
+Sockets (the basic stuff)<br>
 
 ## Contributing
 
@@ -59,4 +63,4 @@ MIT? IDK, do whatever you want with this code. Just don't blame me when it break
 
 ---
 
-**P.S. If you're a security expert reading this, please don't judge me too harshly. We all start somewhere, right? ...Right?** 😅
+**P.S. If you're reading this, don't judge me too harshly plz. We all start somewhere, right? ...Right?** 😅
